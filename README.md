@@ -6,4 +6,4 @@
 
 
 Link:- https://web.presspeak.co/
-Other Link:- https://harshit-2.github.io/PressPeak/home-2.html
+Other Link:- https://harshit-2.github.io/PressPeak/index.html
