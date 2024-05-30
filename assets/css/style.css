@@ -229,7 +229,7 @@ Date Created: July 26, 2019
   --primary-font: 'Poppins', sans-serif;
   --secondary-font: 'Roboto', sans-serif;
   --font-awesome: 'Font Awesome 5 Pro';
-  --primary-color: #FF2C54;
+  --primary-color: #BD1209;
   --secondary-color: #FF9500;
   --action-color: #FECC00;
   --grey-dark-key: #000;
@@ -4861,9 +4861,15 @@ input[type="radio"] + label::after {
 .side-nav-toggler {
   position: relative;
   display: inline-block;
+  display: block; /*--Added--*/
   padding: 0.8rem 1rem;
   margin-left: 1rem;
   margin-right: -1rem;
+}
+@media (min-width: 991px) {
+  .side-nav-toggler {
+    display: none;
+  }
 }
 .side-nav-toggler span {
   position: relative;
@@ -8266,7 +8272,7 @@ address .tel i {
   color: #fff;
 }
 /*--Media queries--*/
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0) {
   .axil-latest-post .post-block {
     display: block;
   }

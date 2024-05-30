@@ -133,18 +133,18 @@
 								</h5>
 								<div class="axil-contact-info">
 									<address class="address">
-										<p class="m-b-xs-30  mid grey-dark-three">Theodore Lowe, Ap
-											#867-859<br>Sit Rd, Azusa New York</p>
+										<!-- <p class="m-b-xs-30  mid grey-dark-three">Theodore Lowe, Ap
+											#867-859<br>Sit Rd, Azusa New York</p> -->
 
-										<div class="h5 m-b-xs-5">We're Available 24/ 7. Call Now.</div>
+										<div class="h5 m-b-xs-5">We're Available 24/7. Call Now.</div>
 										<div>
-											<a class="tel" href="tel:8884562790"><i class="fas fa-phone"></i>(888)
-												456-2790</a>
+											<a class="tel" href="tel:8107337363"><i class="fas fa-phone"></i>(+91)
+												81073 37363</a>
 										</div>
 										<div>
-											<a class="tel" href="tel:12125553333"><i class="fas fa-fax"></i>(121)
+											<!-- <a class="tel" href="tel:12125553333"><i class="fas fa-fax"></i>(121)
 												255-53333</a>
-										</div>
+										</div> -->
 									</address>
 									<!-- End of address -->
 
@@ -211,21 +211,21 @@
 					<div class="navbar-inner">
 						<div class="brand-logo-container">
 							<a href="index.html">
-								<img src="assets/images/logo-black.svg" alt="" class="brand-logo">
+								<img src="assets/images/PressPeak.png" alt="" class="brand-logo">
 							</a>
 						</div>
 						<!-- End of .brand-logo-container -->
 
 						<div class="main-nav-wrapper">
 							<ul class="main-navigation list-inline" id="main-menu">
-								<li class="has-dropdown">
-									<a href="#">Home</a>
+								<li>
+									<a href="index.html">Home</a>
 									<ul class="submenu">
-										<li><a href="index.html">Home One</a></li>
+										<!-- <li><a href="index.html">Home One</a></li>
 										<li><a href="home-2.html">Home Two</a></li>
 										<li><a href="home-3.html">Home Three</a></li>
 										<li><a href="home-4.html">Home Four</a></li>
-										<li><a href="home-5.html">Home Five</a></li>
+										<li><a href="home-5.html">Home Five</a></li> -->
 									</ul>
 									<!-- End of .submenu -->
 								</li>
@@ -477,9 +477,10 @@
 
 				<div class="axil-map-wrapper m-b-xs-30">
 
-					<iframe
+					<!-- <iframe
 						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d848618.3019582209!2d-117.3496119!3d33.8145003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64ed3c3ce8f%3A0x8710c5557f723e2a!2s106+W+1st+St%2C+Los+Angeles%2C+CA+90012%2C+USA!5e0!3m2!1sen!2sbd!4v1563866499894!5m2!1sen!2sbd"
-						width="600" height="450" allowfullscreen></iframe>
+						width="600" height="450" allowfullscreen></iframe> -->
+						<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3890.139054997563!2d77.65730667507407!3d12.834289587468616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUwJzAzLjQiTiA3N8KwMzknMzUuNiJF!5e0!3m2!1sen!2sin!4v1717071497520!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<!-- End of .axil-map-wrapper -->
 			</div>
@@ -711,6 +712,19 @@
 	<script src="assets/js/plugins.js"></script>
 	<!-- Custom Script -->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		const copyrightElement = document.querySelector('.axil-copyright-txt');
+  		const currentYear = new Date().getFullYear();
+  		const updatedCopyrightText = `© ${currentYear}. All rights reserved by Your Company.`;
+  		copyrightElement.textContent = updatedCopyrightText;
+	
+		const currentDateElement = document.querySelector('.current-date');
+		const currentDate = new Date();
+		const options = { month: 'long', day: 'numeric', year: 'numeric' };
+		const formattedDate = currentDate.toLocaleDateString('en-US', options);
+		currentDateElement.textContent = formattedDate;
+	</script>
 
 </body>
 

@@ -211,22 +211,22 @@
 					<div class="navbar-inner">
 						<div class="brand-logo-container">
 							<a href="index.html">
-								<img src="assets/images/logo-black.svg" alt="" class="brand-logo">
+								<img src="assets/images/PressPeak.png" alt="" class="brand-logo">
 							</a>
 						</div>
 						<!-- End of .brand-logo-container -->
 
 						<div class="main-nav-wrapper">
 							<ul class="main-navigation list-inline" id="main-menu">
-								<li class="has-dropdown">
-									<a href="#">Home</a>
-									<ul class="submenu">
+								<li>
+									<a href="index.html">Home</a>
+									<!-- <ul class="submenu">
 										<li><a href="index.html">Home One</a></li>
 										<li><a href="home-2.html">Home Two</a></li>
 										<li><a href="home-3.html">Home Three</a></li>
 										<li><a href="home-4.html">Home Four</a></li>
 										<li><a href="home-5.html">Home Five</a></li>
-									</ul>
+									</ul> -->
 									<!-- End of .submenu -->
 								</li>
 								<li class="has-dropdown">
@@ -356,10 +356,10 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<main class="axil-content">
-							<div class="add-container m-b-xs-60">
+							<!-- <div class="add-container m-b-xs-60">
 								<a href="#"><img src="assets/images/clientbanner/clientbanner.jpg" alt="add one"
 										class="img-fluid"></a>
-							</div>
+							</div> -->
 							<div class="media post-block post-block__mid m-b-xs-30">
 								<a href="post-format-standard.html" class="align-self-center"><img class=" m-r-xs-30"
 										src="assets/images/sports-news/post-img-3.jpg" alt=""></a>
@@ -522,10 +522,10 @@
 
 					<div class="col-lg-4">
 						<aside class="post-sidebar">
-							<div class="add-block-widget m-b-xs-40">
+							<!-- <div class="add-block-widget m-b-xs-40">
 								<a href="#"><img src="assets/images/clientbanner/clientbanner2.jpg" alt="sidebar add"
 										class="img-fluid"></a>
-							</div>
+							</div> -->
 							<!-- End of .add-block-widget -->
 
 							<div class="sidebar-social-share-widget m-b-xs-40">
@@ -1021,10 +1021,10 @@
 							</div>
 							<!-- End of .sidebar-post-widget -->
 
-							<div class="add-block-widget m-b-xs-40">
+							<!-- <div class="add-block-widget m-b-xs-40">
 								<a href="#"><img src="assets/images/clientbanner/clientbanner3.jpg" alt="sidebar add"
 										class="img-fluid"></a>
-							</div>
+							</div> -->
 							<!-- End of .add-block-widget -->
 						</aside>
 						<!-- End of .post-sidebar -->
@@ -1261,7 +1261,18 @@
 	<script src="assets/js/plugins.js"></script>
 	<!-- Custom Script -->
 	<script src="assets/js/main.js"></script>
-
+	<script>
+		const copyrightElement = document.querySelector('.axil-copyright-txt');
+  		const currentYear = new Date().getFullYear();
+  		const updatedCopyrightText = `© ${currentYear}. All rights reserved by Your Company.`;
+  		copyrightElement.textContent = updatedCopyrightText;
+	
+		const currentDateElement = document.querySelector('.current-date');
+		const currentDate = new Date();
+		const options = { month: 'long', day: 'numeric', year: 'numeric' };
+		const formattedDate = currentDate.toLocaleDateString('en-US', options);
+		currentDateElement.textContent = formattedDate;
+	</script>
 </body>
 
 

@@ -211,22 +211,22 @@
 					<div class="navbar-inner">
 						<div class="brand-logo-container">
 							<a href="index.html">
-								<img src="assets/images/logo-black.svg" alt="" class="brand-logo">
+								<img src="assets/images/PressPeak.png" alt="" class="brand-logo">
 							</a>
 						</div>
 						<!-- End of .brand-logo-container -->
 
 						<div class="main-nav-wrapper">
 							<ul class="main-navigation list-inline" id="main-menu">
-								<li class="has-dropdown">
-									<a href="#">Home</a>
-									<ul class="submenu">
+								<li>
+									<a href="index.html">Home</a>
+									<!-- <ul class="submenu">
 										<li><a href="index.html">Home One</a></li>
 										<li><a href="home-2.html">Home Two</a></li>
 										<li><a href="home-3.html">Home Three</a></li>
 										<li><a href="home-4.html">Home Four</a></li>
 										<li><a href="home-5.html">Home Five</a></li>
-									</ul>
+									</ul> -->
 									<!-- End of .submenu -->
 								</li>
 								<li class="has-dropdown">
@@ -807,7 +807,18 @@
 	<script src="assets/js/plugins.js"></script>
 	<!-- Custom Script -->
 	<script src="assets/js/main.js"></script>
-
+	<script>
+		const copyrightElement = document.querySelector('.axil-copyright-txt');
+  		const currentYear = new Date().getFullYear();
+  		const updatedCopyrightText = `© ${currentYear}. All rights reserved by Your Company.`;
+  		copyrightElement.textContent = updatedCopyrightText;
+	
+		const currentDateElement = document.querySelector('.current-date');
+		const currentDate = new Date();
+		const options = { month: 'long', day: 'numeric', year: 'numeric' };
+		const formattedDate = currentDate.toLocaleDateString('en-US', options);
+		currentDateElement.textContent = formattedDate;
+	</script>
 </body>
 
 
