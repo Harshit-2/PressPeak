@@ -5218,7 +5218,7 @@ input[type="radio"] + label::after {
 
 .post-block > a:hover img,
 .post-block figure > a:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1);  
   border-radius: 20px;
 }
 /*till here*/
