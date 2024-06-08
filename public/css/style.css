@@ -8294,10 +8294,34 @@ address .tel i {
   color: #fff;
 }
 
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: none;
+}
+
+.popup-message.show {
+  display: block;
+}
+
+
+
+/* .space {
+  margin: -20em;
+  padding: -20em;
+} */
+
 /* .top-banner {
   line-height: -10em;
 } */
 /*--Media queries--*/
+
 @media screen and (min-width: 0) {
   .axil-latest-post .post-block {
     display: block;
