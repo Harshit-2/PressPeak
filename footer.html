@@ -246,7 +246,7 @@
                 </ul>
                 <!-- End of .footer-bottom-links -->
                 <p class="axil-copyright-txt">
-                    © 2019. All rights reserved by Your Company.
+                    © 2019. All rights reserved by Press PeaK Ltd.
                 </p>
             </div>
             <!-- End of .footer-bottom -->
@@ -260,8 +260,8 @@
     <script>
         const copyrightElement = document.querySelector('.axil-copyright-txt');
         const currentYear = new Date().getFullYear();
-        const updatedCopyrightText = `© ${currentYear}. All rights reserved by Your Company.`;
-        copyrightElement.textContent = updatedCopyrightText;
+        const updatedCopyrightText = `&copy; ${currentYear}. All rights reserved by Press PeaK Ltd.`;
+        copyrightElement.innerHTML = updatedCopyrightText;
     </script>
 </body>
 

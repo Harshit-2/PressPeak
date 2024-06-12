@@ -6,14 +6,14 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const firebaseConfig = {
-  apiKey: "yourApiKey",
-  authDomain: "yourAuthDomain",
-  projectId: "yourProjectId",
-  storageBucket: "yourStorageBucket",
-  messagingSenderId: "yourmessagingSenderId",
-  appId: "yourAppId",
-  measurementId: "yourMeasurementId"
-};
+    apiKey: "AIzaSyAzaP6mWi6aEyCVCRWNS4oEW-jlkGWXJ48",
+    authDomain: "presspeak-700ee.firebaseapp.com",
+    projectId: "presspeak-700ee",
+    storageBucket: "presspeak-700ee.appspot.com",
+    messagingSenderId: "943830180943",
+    appId: "1:943830180943:web:97a880f6529e5cd19b363a",
+    measurementId: "G-139TX0GT5P"
+  };
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'about-us.html'));
+    res.sendFile(path.join(__dirname, 'about.html'));
 });
 
 app.get('/business.html', (req, res) => {
@@ -83,11 +83,15 @@ app.get('/nav.html', (req, res) => {
 });
 
 app.get('/sports.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'ports.html'));
+    res.sendFile(path.join(__dirname, 'sports.html'));
 });
 
 app.get('/team.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'team.html'));
+});
+
+app.get('/author.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'author.html'));
 });
 
 app.get('/technology.html', (req, res) => {
@@ -146,6 +150,166 @@ app.get('/post-layout-one.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'post-layout-one.html'));
 });
 
+
+app.post('/post-format-standard', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-format-gallery', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-format-quote', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-format-text-only', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-format-video', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-layout-five', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-layout-four', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-layout-three', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-layout-two', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
+
+  app.post('/post-layout-one', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    const contactData = { name, email, message };
+  
+    const contactsRef = collection(db, 'reply');
+    addDoc(contactsRef, contactData)
+     .then((docRef) => {
+        res.json({ message: 'Contact data saved successfully!' });
+      })
+     .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error saving contact data' });
+      });
+  });
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

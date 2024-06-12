@@ -893,15 +893,33 @@
 	<!-- Custom Script -->
 	<script src="./js/main.js"></script>
 	<script>
+		fetch('nav.html')
+		.then(response => response.text())
+		.then(data => {
+			const navPlaceholder = document.getElementById('nav-placeholder-top');
+			navPlaceholder.innerHTML = data;
+
+			const scripts = navPlaceholder.querySelectorAll('script');
+			scripts.forEach(script => {
+				const newScript = document.createElement('script');
+				newScript.textContent = script.textContent;
+				document.body.appendChild(newScript);
+			});
+		})
+		.catch(error => console.error('Error loading navigation:', error));
+
+	</script>
+	
+	<script>
 		// Load footer
 		fetch('footer.html')
-			.then(response => response.text())
-			.then(data => {
-				const footerPlaceholder = document.getElementById('footer-placeholder');
-				footerPlaceholder.innerHTML = data;
-			})
-			.catch(error => console.error('Error loading footer:', error));
-	</script>
+		.then(response => response.text())
+		.then(data => {
+		  const footerPlaceholder = document.getElementById('footer-placeholder');
+		  footerPlaceholder.innerHTML = data;
+		})
+		.catch(error => console.error('Error loading footer:', error));
+</script>
 </body>
 
 
