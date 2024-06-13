@@ -3128,7 +3128,7 @@ figure {
   text-align: center !important;
 }
 .section-gap {
-  padding-top: 6rem;
+  padding-top: 5rem;
   padding-bottom: 3rem;
 }
 .section-gap-top {
@@ -5747,7 +5747,7 @@ input[type="radio"] + label::after {
   }
 }
 .banner__default {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 .banner__single-hero {
   display: flex;
@@ -8310,6 +8310,11 @@ address .tel i {
   display: block;
 }
 
+
+/* .no-effect:hover {
+  cursor: default;
+  color: #000;
+} */
 
 
 /* .space {
