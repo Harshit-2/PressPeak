@@ -6,10 +6,10 @@ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
         apiKey: "yourApiKey",
-        authDomain: "yourAuthDomain",
+        authDomain: "your AuthDomain",
         projectId: "yourProjectId",
         storageBucket: "yourStorageBucket",
-        messagingSenderId: "yourmessagingSenderId",
+        messagingSenderId: "yourMessagingSenderId",
         appId: "yourAppId",
         measurementId: "yourMeasurementId"
 };
