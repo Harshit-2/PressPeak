@@ -6,13 +6,13 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const firebaseConfig = {
-    apiKey: "AIzaSyAzaP6mWi6aEyCVCRWNS4oEW-jlkGWXJ48",
-    authDomain: "presspeak-700ee.firebaseapp.com",
-    projectId: "presspeak-700ee",
-    storageBucket: "presspeak-700ee.appspot.com",
-    messagingSenderId: "943830180943",
-    appId: "1:943830180943:web:97a880f6529e5cd19b363a",
-    measurementId: "G-139TX0GT5P"
+    apiKey: "yourApiKey",
+    authDomain: "your AuthDomain",
+    projectId: "yourProjectId",
+    storageBucket: "yourStorageBucket",
+    messagingSenderId: "yourMessagingSenderId",
+    appId: "yourAppId",
+    measurementId: "yourMeasurementId"
   };
 
 // Initialize Firebase
