@@ -864,15 +864,27 @@
 	<script src="./js/main.js"></script>
 	<script src="./public/js/analytics.js"></script>
 	<script>
-		// Load footer
 		fetch('footer.html')
-		.then(response => response.text())
-		.then(data => {
-		  const footerPlaceholder = document.getElementById('footer-placeholder');
-		  footerPlaceholder.innerHTML = data;
-		})
-		.catch(error => console.error('Error loading footer:', error));
-</script>
+			.then(response => response.text())
+			.then(data => {
+				const footerPlaceholder = document.getElementById('footer-placeholder');
+				footerPlaceholder.innerHTML = data;
+	
+				const scripts = footerPlaceholder.querySelectorAll('script');
+				scripts.forEach(script => {
+					const newScript = document.createElement('script');
+					newScript.textContent = script.textContent;
+					document.body.appendChild(newScript);
+				});
+	
+				// Update copyright year
+				const currentYear = new Date().getFullYear();
+				const copyrightElement = document.getElementById('copyright-txt');
+				const updatedCopyrightText = `&copy; ${currentYear}. All rights reserved by Press PeaK Ltd.`;
+				copyrightElement.innerHTML = updatedCopyrightText;
+			})
+			.catch(error => console.error('Error loading footer:', error));
+	</script>
 </body>
 
 
